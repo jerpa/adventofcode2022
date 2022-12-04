@@ -1,4 +1,4 @@
-module github.com/jerpa/adventofcode2021/common
+module github.com/jerpa/adventofcode2022/common
 
 go 1.17
 
