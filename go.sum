@@ -1,0 +1,4 @@
+github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
+github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/jerpa/adventofcode2022/helpers v0.0.0-20221204204946-3ad8a5233cb1 h1:c1l9E57bi6/VBhHV/xyKDRkjBTwyFrWs/KV2zdYJaZk=
+github.com/jerpa/adventofcode2022/helpers v0.0.0-20221204204946-3ad8a5233cb1/go.mod h1:iD0y2XfDUqY12gvsKRM+oYM3SktMg7/XvtNGYntpBfw=

@@ -1,2 +1,2 @@
 #!/bin/bash
-go get github.com/jerpa/adventofcode2022/common@master
+go get github.com/jerpa/adventofcode2022/helpers@master
