@@ -12,33 +12,33 @@ func main() {
 	c.Print("Part1: ", part1())
 	c.Print("Took: ", time.Since(start).String())
 	start = time.Now()
-	//c.Print("Part2: ", part2())
+	c.Print("Part2: ", part2())
 	c.Print("Took: ", time.Since(start).String())
 }
 
 func part1() int {
 	f := readFiles()
 
-	//	inp := c.ReadInputFile()
-
 	sum := 0
 	sum = smallFiles(f["/"].items)
-	/*	for _, v := range inp {
-			sum += v
-		}
-	*/
+
 	return sum
 }
 
 func part2() int {
-	inp := c.ReadInputFile()
+	f := readFiles()
 
-	sum := 0
-	for _, v := range c.GetInts(inp) {
-		sum += v
+	need := 30000000 - (70000000 - f["/"].size)
+	best := 70000000
+
+	sizes := bestDir(f["/"].items)
+	for _, v := range sizes {
+		if v >= need && v < best {
+			best = v
+		}
 	}
 
-	return sum
+	return best
 }
 func smallFiles(m map[string]item) int {
 	size := 0
@@ -54,6 +54,21 @@ func smallFiles(m map[string]item) int {
 	}
 	return size
 }
+func bestDir(m map[string]item) []int {
+	res := []int{}
+	for k := range m {
+		if m[k].isDir {
+			res = append(res, bestDir(m[k].items)...)
+		}
+	}
+	for k := range m {
+		if m[k].isDir {
+			res = append(res, m[k].size)
+		}
+	}
+	return res
+}
+
 func readFiles() map[string]item {
 	inp := c.ReadInputFile()
 	items := map[string]item{"/": item{name: "/", isDir: true, size: 0, items: map[string]item{}}}
