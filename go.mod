@@ -7,4 +7,7 @@ require (
 	github.com/jerpa/adventofcode2022/helpers v0.0.0-20221204204946-3ad8a5233cb1
 )
 
-require github.com/google/uuid v1.3.0 // indirect
+require (
+	github.com/Knetic/govaluate v3.0.0+incompatible // indirect
+	github.com/google/uuid v1.3.0 // indirect
+)
